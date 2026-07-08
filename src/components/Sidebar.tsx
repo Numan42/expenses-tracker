@@ -7,8 +7,10 @@ import {
   BarChart3,
   Tags,
   Wallet,
+  CircleUser,
   ChevronLeft,
   ChevronRight,
+  
 } from 'lucide-react';
 import { useUI } from '@/hooks/useUIContext';
 import type { ViewType } from '@/types';
@@ -86,11 +88,17 @@ export function Sidebar() {
 
       {/* Toggle Button */}
       <div className="px-3 pb-4">
+      <button
+          className="w-full flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-slate-400 hover:text-slate-600 hover:bg-slate-50 transition-colors"
+        >
+          {sidebarCollapsed ? <CircleUser  size={24} /> : <><CircleUser  size={24} /></>}
+        </button>
+        
         <button
           onClick={toggleSidebar}
           className="w-full flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-slate-400 hover:text-slate-600 hover:bg-slate-50 transition-colors"
         >
-          {sidebarCollapsed ? <ChevronRight size={18} /> : <><ChevronLeft size={18} /> <span className="text-sm">Collapse</span></>}
+          {sidebarCollapsed ? <ChevronRight size={18} /> : <><ChevronLeft size={18} /></>}
         </button>
       </div>
     </motion.aside>

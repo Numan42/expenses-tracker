@@ -21,7 +21,7 @@ const viewComponents: Record<string, React.ComponentType> = {
 };
 
 const viewTitles: Record<string, string> = {
-  dashboard: 'Dashboard',
+  dashboard: 'Hi Numan',
   daily: 'Daily Tracker',
   weekly: 'Weekly Overview',
   monthly: 'Monthly Calendar',
